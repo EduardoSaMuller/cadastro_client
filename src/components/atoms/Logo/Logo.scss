@@ -1,0 +1,21 @@
+@import '../../../assets/scss/rem-calc';
+@import '../../../assets/scss/variables';
+
+
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: rem-calc(50);
+    }
+    text-decoration: none;
+    color:white;
+    &:visited{
+      text-decoration: none;
+      color: var(--white)
+    }
+    
+  }
+
+
