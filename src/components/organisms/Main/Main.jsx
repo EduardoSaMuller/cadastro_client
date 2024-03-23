@@ -1,6 +1,8 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-
+import ClientForm from '../../molecules/Form/Form';
+import ClientCard from '../../molecules/Card/Card';
+import './Main.scss'
 const drawerWidth = 200;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -13,6 +15,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
+    marginTop: `100px`,
     marginLeft: `-${drawerWidth}px`,
     ...(open && {
       transition: theme.transitions.create('margin', {
@@ -25,33 +28,21 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
 );
 
 export default function MainContent({ open }) {
-  console.log(open,'open aqui')
   return (
     <Main open={open}>
-      
-        <h1>Main Content</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus lorem
-          nec nisi venenatis, vel lacinia justo commodo. Integer semper, urna nec
-          egestas ultrices, libero nisi scelerisque eros, eu fermentum nisl magna
-          ac nisi. Vivamus sed quam id tellus fermentum tincidunt. Donec sodales
-          faucibus tellus eget tempor. Curabitur sodales risus sit amet erat
-          condimentum bibendum. Donec nec odio non dolor fermentum tristique vel eu
-          ipsum. Quisque ut aliquet ex, vitae interdum justo. Integer in volutpat
-          ex. Proin aliquet elit ut neque vulputate tristique. Cras porttitor a
-          eros sit amet posuere.
-        </p>
-        <p>
-          Morbi sed magna vel metus scelerisque varius sed nec velit. Curabitur
-          pharetra arcu ac varius pellentesque. Fusce iaculis metus ac eros
-          tincidunt sollicitudin. Vestibulum nec volutpat tellus. Nulla eget
-          eleifend libero. Phasellus sit amet purus malesuada, condimentum ligula
-          eget, efficitur neque. Phasellus at leo magna. Duis dapibus massa at
-          ante pellentesque, ac malesuada eros pellentesque. Fusce eget erat et
-          nulla posuere laoreet. Nullam in purus at lectus viverra commodo non
-          quis tortor. Vestibulum mollis ultrices eros ut consectetur. Donec
-          pellentesque sit amet lorem sit amet interdum.
-        </p>
+      <div className='main-header'>
+        <button>Teste Inicio</button>
+        <button>Novo Cadastro</button>
+      </div>
+      <div className='main-content'>
+        <div className='main-content-info'> 
+          <h2>Lista de Clientes</h2>
+        </div>
+        <div className='main-content-list'>
+          <ClientCard/>
+        </div>
+      </div>
+      <ClientForm/>
     </Main>
   );
 }

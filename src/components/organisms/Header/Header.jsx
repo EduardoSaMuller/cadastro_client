@@ -1,38 +1,66 @@
-import React from 'react';
+//React
+import React ,{ useState, useEffect }from 'react';
 import { Link } from 'react-router-dom';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import CssBaseline from '@mui/material/CssBaseline';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import HomeIcon from '@mui/icons-material/Home';
-import GroupIcon from '@mui/icons-material/Group';
-import LoginIcon from '@mui/icons-material/Login';
-import LogoutIcon from '@mui/icons-material/Logout';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import CloseIcon from '@mui/icons-material/Close';
+
+//Importação de componentes criados
 import Logo from '../../atoms/Logo/Logo';
-import {AppBar, DrawerHeader , drawerWidth} from './Header.style';
 import MainContent from '../../organisms/Main/Main';
+import user from '../../../assets/images/user.png'
+import {AppBar, DrawerHeader , drawerWidth} from './Header.style';
 import  "./Header.scss"
 
+//Funções do MUI
+import CssBaseline from '@mui/material/CssBaseline';
+
+//Componentes do MUI
+import Avatar from '@mui/material/Avatar'
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Toolbar from '@mui/material/Toolbar';
+
+//Icons do MUI
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import CloseIcon from '@mui/icons-material/Close';
+import GroupIcon from '@mui/icons-material/Group';
+import HomeIcon from '@mui/icons-material/Home';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
+import IconButton from '@mui/material/IconButton';
+import MenuIcon from '@mui/icons-material/Menu';
+
+
 export default function Header2() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  
+  const [isLogged, setIsLogged] = useState(false)
+    const openMenu = Boolean(anchorEl);
 
   const handleDrawerOpen = () => {
     setOpen(!open);
   };
+  const handleLogin = () => {
+    setIsLogged(true);
+  };
+  const handleLogout = () => {
+    setIsLogged(false);
+  };
 
-
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -52,14 +80,40 @@ export default function Header2() {
             <Logo/>
           </Link>
         </Toolbar>
-        <IconButton
+
+        <Button
+        id="basic-button"
+        aria-controls={openMenu ? 'basic-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={openMenu ? 'true' : undefined}
+        onClick={handleClick}
+      >
+      <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={handleDrawerOpen}
+          onClick={handleLogin}
           edge="end"
+          className="nav-header-login"
         >
-          <AccountCircleIcon />
+          
+          {isLogged ? <Avatar alt="imagem usuário" src={user} /> : <>Logar<LoginIcon/></>}
         </IconButton>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={openMenu}
+        onClose={handleClose}
+        MenuListProps={{
+          'aria-labelledby': 'basic-button',
+        }}
+      >
+        <MenuItem > <Link to="/minha_conta" className="menu-link" >
+            Minha Conta
+          </Link></MenuItem>
+        <MenuItem onClick={handleLogout}>Sair</MenuItem>
+      </Menu>
+        
       </AppBar>
       <Drawer
         sx={{
@@ -73,9 +127,10 @@ export default function Header2() {
         variant="persistent"
         anchor="left"
         open={open}
+       
       >
         <Divider />
-        <List>
+        <List  className='lateral_nav_menu'>
           <ListItem  disablePadding>
             <ListItem button className="drawer-list-item">
               <Link to="/">

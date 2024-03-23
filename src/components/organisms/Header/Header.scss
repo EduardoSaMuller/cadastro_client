@@ -8,7 +8,11 @@
     flex-direction: row!important;
     align-items: center;
     padding-right: rem-calc(16);
-    
+    width: 100% !important;
+    z-index: 10000 !important;
+    .nav-header-login{
+        color: white;
+    }
 
     .nav-header-menuBtn{
         transition: transform 0.3s ease;
@@ -19,5 +23,15 @@
         &.open{
             transform: rotate(180deg)
         }
+    }
+    
+}
+.lateral_nav_menu{
+    margin-top: rem-calc(64)!important;
+}
+.menu-link{
+    color: var(--black);
+    &:visited{
+        color: var(--black);  
     }
 }

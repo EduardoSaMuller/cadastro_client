@@ -1,0 +1,34 @@
+@import '../../../assets/scss/rem-calc';
+@import '../../../assets/scss/sizes';
+@import '../../../assets/scss/variables';
+
+.main-header{
+    max-width: rem-calc(800);
+    height: rem-calc(30);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem-calc(12);
+    button{
+        border: 1px solid lightgray;
+        border-radius: rem-calc(5);
+        color: var(--white);
+        background-color: var(--success);
+    }
+}
+
+.main-content{
+    max-width: rem-calc(800);
+    border: 1px solid var(--secondary-color);
+    border-radius: rem-calc(5);
+    .main-content-info{
+        color: var(--white);
+        background-color: var(--secondary-color);
+        text-align: start;
+       h2{
+        padding: rem-calc(10) rem-calc(0) rem-calc(10) rem-calc(24);
+       }
+    }
+    .main-content-list{
+        padding: 15px;
+    }
+}

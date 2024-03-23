@@ -1,0 +1,53 @@
+@import '../../../assets/scss/rem-calc';
+@import '../../../assets/scss/sizes';
+@import '../../../assets/scss/variables';
+
+
+.card-content{
+    width: rem-calc(350);
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    flex-direction: column;
+    .card-info{
+        display: flex;
+        border-bottom: 1px solid lightgrey;
+        margin: 0 16px;
+        .card-info-left{
+            border-right: 1px solid lightgray;
+            margin: 10px 0;
+            padding-right: 10px;
+            font-size: 14px;
+            img{
+                width: 110px;
+    height: auto;
+            }
+        }
+        .card-info-right{
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 10px;
+            p{
+                font-size: 12px;
+            }
+            h2{
+                text-align: center;
+    background: darkgray;
+    color: white;
+            }
+        }
+    }
+    .card-complete-info{
+      text-align: end;
+      padding: 8px 16px;
+      button{
+        background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+      }
+    }
+}
