@@ -17,7 +17,7 @@
 }
 
 .main-content{
-    max-width: rem-calc(800);
+    max-width: rem-calc(960);
     border: 1px solid var(--secondary-color);
     border-radius: rem-calc(5);
     .main-content-info{
@@ -30,5 +30,9 @@
     }
     .main-content-list{
         padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
     }
 }

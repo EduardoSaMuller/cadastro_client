@@ -2,3 +2,25 @@
 @use './assets/scss/reset';
 @use './assets/scss/variables';
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+ 
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1976d2; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #003e80; 
+  }
+
+  .Toastify__toast-container{
+    margin-top: 50px!important;
+  }

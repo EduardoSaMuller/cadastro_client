@@ -27,7 +27,6 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 
 //Icons do MUI
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import GroupIcon from '@mui/icons-material/Group';
 import HomeIcon from '@mui/icons-material/Home';
@@ -42,17 +41,10 @@ export default function Header2() {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   
-  const [isLogged, setIsLogged] = useState(false)
     const openMenu = Boolean(anchorEl);
 
   const handleDrawerOpen = () => {
     setOpen(!open);
-  };
-  const handleLogin = () => {
-    setIsLogged(true);
-  };
-  const handleLogout = () => {
-    setIsLogged(false);
   };
 
   const handleClick = (event) => {
@@ -91,12 +83,11 @@ export default function Header2() {
       <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={handleLogin}
           edge="end"
           className="nav-header-login"
         >
           
-          {isLogged ? <Avatar alt="imagem usuário" src={user} /> : <>Logar<LoginIcon/></>}
+         <Avatar alt="imagem usuário" src={user} />
         </IconButton>
       </Button>
       <Menu
@@ -111,7 +102,7 @@ export default function Header2() {
         <MenuItem > <Link to="/minha_conta" className="menu-link" >
             Minha Conta
           </Link></MenuItem>
-        <MenuItem onClick={handleLogout}>Sair</MenuItem>
+        <MenuItem >Sair</MenuItem>
       </Menu>
         
       </AppBar>

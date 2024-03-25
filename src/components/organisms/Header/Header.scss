@@ -11,7 +11,7 @@
     width: 100% !important;
     z-index: 10000 !important;
     .nav-header-login{
-        color: white;
+        color: var(--white);
     }
 
     .nav-header-menuBtn{
@@ -28,6 +28,12 @@
 }
 .lateral_nav_menu{
     margin-top: rem-calc(64)!important;
+    a{
+        color: gray;
+        svg{
+            margin-right: rem-calc(30);
+        }
+    }
 }
 .menu-link{
     color: var(--black);

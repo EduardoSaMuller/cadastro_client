@@ -1,53 +1,65 @@
-@import '../../../assets/scss/rem-calc';
-@import '../../../assets/scss/sizes';
-@import '../../../assets/scss/variables';
+@import "../../../assets/scss/rem-calc";
+@import "../../../assets/scss/sizes";
+@import "../../../assets/scss/variables";
 
-
-.card-content{
-    width: rem-calc(350);
+.card-content {
+  width: rem-calc(450);
+  display: flex;
+  border: rem-calc(1) solid lightgray;
+  border-radius: rem-calc(5);
+  flex-direction: column;
+  .card-info {
     display: flex;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    flex-direction: column;
-    .card-info{
-        display: flex;
-        border-bottom: 1px solid lightgrey;
-        margin: 0 16px;
-        .card-info-left{
-            border-right: 1px solid lightgray;
-            margin: 10px 0;
-            padding-right: 10px;
-            font-size: 14px;
-            img{
-                width: 110px;
-    height: auto;
-            }
-        }
-        .card-info-right{
-            text-align: left;
-            padding-left: 10px;
-            margin-top: 10px;
-            p{
-                font-size: 12px;
-            }
-            h2{
-                text-align: center;
-    background: darkgray;
-    color: white;
-            }
-        }
-    }
-    .card-complete-info{
-      text-align: end;
-      padding: 8px 16px;
-      button{
-        background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
+    border-bottom: rem-calc(1) solid lightgrey;
+    margin: 0 rem-calc(16);
+    .card-info-left {
+      border-right: rem-calc(1) solid lightgray;
+      margin: rem-calc(16) 0;
+      padding-right: rem-calc(10);
+      font-size: rem-calc(14);
+      img {
+        width: rem-calc(130);
+        height: rem-calc(140);
+        border-radius: rem-calc(5);
       }
     }
+    .card-info-right {
+      text-align: left;
+      padding-left: rem-calc(10);
+      margin:rem-calc(16) 0;
+      width: 100%;
+      .card-info-right-content{
+        position: relative;
+        span{
+            font-size: rem-calc(12);
+            font-weight: bold;
+            position: absolute;
+          }
+          p {
+            padding-top: rem-calc(14);
+            font-size: rem-calc(14);
+          }
+
+      }
+     
+      h2 {
+        text-align: center;
+        background: darkgray;
+        color: white;
+      }
+    }
+  }
+  .card-complete-info {
+    text-align: end;
+    padding: rem-calc(8) rem-calc(16);
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: rem-calc(10) rem-calc(20);
+      border-radius: rem-calc(5);
+      font-size: rem-calc(14);
+      cursor: pointer;
+    }
+  }
 }
