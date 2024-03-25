@@ -3,13 +3,14 @@
 @import '../../../assets/scss/variables';
 
 main{
+    margin: 60px auto -1px !important;
 @media (max-width: 768px) {
   
     padding: 24px 12px!important;
     margin-left: -229px!important;
   
     .card-complete-info{
-        
+
     }
 }
 }
