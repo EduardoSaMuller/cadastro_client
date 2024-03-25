@@ -1,0 +1,109 @@
+@import "../../../assets/scss/rem-calc";
+@import "../../../assets/scss/sizes";
+@import "../../../assets/scss/variables";
+
+.card-content {
+  width: rem-calc(450);
+  display: flex;
+  border: rem-calc(1) solid lightgray;
+  border-radius: rem-calc(5);
+  flex-direction: column;
+  .card-info {
+    display: flex;
+    border-bottom: rem-calc(1) solid lightgrey;
+    margin: 0 rem-calc(16);
+    @media (max-width: 600px) {
+      flex-direction: column;
+          
+      }
+    .card-info-left {
+      border-right: rem-calc(1) solid lightgray;
+      margin: rem-calc(16) 0;
+      padding-right: rem-calc(10);
+      font-size: rem-calc(14);
+      img {
+        width: rem-calc(130);
+        height: rem-calc(140);
+        border-radius: rem-calc(5);
+      }
+    }
+    .card-info-right {
+      text-align: left;
+      padding-left: rem-calc(10);
+      margin:rem-calc(16) 0;
+      width: 100%;
+      .card-info-right-content{
+        position: relative;
+        span{
+            font-size: rem-calc(12);
+            font-weight: bold;
+            position: absolute;
+          }
+          p {
+            padding-top: rem-calc(14);
+            font-size: rem-calc(14);
+          }
+
+          &.adress-info{
+            p{font-size: rem-calc(12);}
+            h3{font-weight: bold;}
+          }
+
+      }
+     
+      h2 {
+        text-align: center;
+        background: darkgray;
+        color: white;
+      }
+    }
+
+  }
+
+  .card-complete-info {
+    text-align: end;
+    padding: rem-calc(8) rem-calc(16);
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: rem-calc(10) rem-calc(20);
+      border-radius: rem-calc(5);
+      font-size: rem-calc(14);
+      cursor: pointer;
+    }
+  }
+
+@media (max-width: 600px) {
+max-width: rem-calc(320);
+    
+}
+}
+
+.card-info-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.additional-details-enter {
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.additional-details-enter-active {
+  opacity: 1;
+  max-height:  rem-calc(200); /* Altura máxima das informações adicionais */
+}
+
+.additional-details-exit {
+  opacity: 1;
+  max-height:  rem-calc(200); /* Altura máxima das informações adicionais */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.additional-details-exit-active {
+  opacity: 0;
+  max-height: 0;
+}
+

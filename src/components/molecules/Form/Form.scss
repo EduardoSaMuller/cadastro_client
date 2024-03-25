@@ -1,0 +1,98 @@
+@import "../../../assets/scss/rem-calc";
+@import "../../../assets/scss/sizes";
+@import "../../../assets/scss/variables";
+
+.form-content{
+  padding: rem-calc(15);
+  
+}
+.person-form {
+  max-width:  rem-calc(600);
+  min-width:  rem-calc(300);
+  padding:  rem-calc(15);
+  h3{
+    margin-bottom:  rem-calc(10);
+  }
+  .form-file{
+    margin-bottom:  rem-calc(15);
+    img{
+      width:  rem-calc(100);
+      height:  rem-calc(150);
+    }
+  }
+  .form-label-content {
+    position: relative;
+    margin-bottom:  rem-calc(24);
+    text-align: left;
+    span{
+      font-size:  rem-calc(12);
+      color: red;
+      margin-left:  rem-calc(20);  
+    position: absolute
+    }
+    .form-floating-label {
+      color: #1e4c82;
+      font-size: rem-calc(13);
+      font-weight: normal;
+      position: absolute;
+      pointer-events: none;
+      left:  rem-calc(15);
+      top:  rem-calc(11);
+      padding: 0 5px;
+      background: #fff;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    .form-floating-input,
+    .form-floating-select {
+      font-size:  rem-calc(12);
+      display: block;
+      width: 100%;
+      height: 36px;
+      padding: 0  rem-calc(20);
+      background: #fff;
+      color: #323840;
+      border: rem-calc(1) solid #3d85d8;
+      border-radius: rem-calc(4);
+      box-sizing: border-box;
+      &:focus {
+        outline: none;
+        ~ .form-floating-label {
+          top: -8px;
+          font-size: rem-calc(13);
+        }
+      }
+    }
+
+    .form-floating-input:not(:placeholder-shown) ~ .form-floating-label,
+    .form-floating-select:not([value=""]):valid ~ .form-floating-label {
+      top: -8px;
+      font-size: rem-calc(13);
+    }
+
+    .form-floating-textarea:not(:placeholder-shown) ~ .form-floating-label,
+    .form-floating-select[value=""]:focus ~ .form-floating-label {
+      top:  rem-calc(11);
+      font-size: rem-calc(13);
+    }
+  }
+  select.form-floating-select {
+    -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
+  select.form-floating-select::-ms-expand {
+    display: none;
+  }
+  input[type="file"] {
+    display: none;
+  }
+
+  .custom-file-upload {
+    border: rem-calc(1) solid #ccc;
+    display: inline-block;
+    padding: 6px  rem-calc(12);
+    cursor: pointer;
+  }
+}

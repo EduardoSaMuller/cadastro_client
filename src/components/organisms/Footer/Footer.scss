@@ -1,0 +1,11 @@
+@import '../../../assets/scss/rem-calc';
+@import '../../../assets/scss/sizes';
+@import '../../../assets/scss/variables';
+
+footer{
+    width: 100%;
+    padding: rem-calc(10);
+    text-align: center;
+    background-color: darken(#007bff, 25%);
+    color: white;
+}

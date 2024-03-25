@@ -1,0 +1,52 @@
+// Estilos específicos para a página Home
+
+@use '../assets/scss/rem-calc';
+@use '../assets/scss/reset';
+@use '../assets/scss/variables';
+
+.home-container {
+    max-width:  rem-calc(1200);
+    margin: 0 auto;
+    padding:  rem-calc(20);
+  }
+  
+  .home-title {
+    font-size:  rem-calc(32);
+    color: #333;
+    margin-bottom:  rem-calc(20);
+  }
+  
+  .card {
+    background-color: #f9f9f9;
+    border-radius:  rem-calc(8);
+    padding:  rem-calc(20);
+    margin-bottom:  rem-calc(20);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-title {
+    font-size:  rem-calc(24);
+    color: #555;
+    margin-bottom:  rem-calc(10);
+  }
+  
+  .card-content {
+    margin:  rem-calc(10) 0;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding:  rem-calc(10)  rem-calc(20);
+    border-radius:  rem-calc(5);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  

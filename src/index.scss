@@ -1,0 +1,26 @@
+@use './assets/scss/rem-calc';
+@use './assets/scss/reset';
+@use './assets/scss/variables';
+
+/* width */
+::-webkit-scrollbar {
+    width: rem-calc(10)
+  }
+  
+  /* Track */
+ 
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1976d2; 
+    border-radius:rem-calc(10);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #003e80; 
+  }
+
+  .Toastify__toast-container{
+    margin-top: rem-calc(50)!important;
+  }

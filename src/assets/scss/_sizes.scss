@@ -1,0 +1,18 @@
+
+@import './rem-calc';
+:root{
+    
+  --sm-pd: rem-calc(12);
+  --md-pd: rem-calc(16);
+  --lg-pd: rem-calc(20);
+  --xl-pd: rem-calc(24);
+
+
+  --sm-width: 320px;
+  --md-width: 540px;
+  --lg-width: 760px;
+  --xl-width: 980px;
+
+}
+
+

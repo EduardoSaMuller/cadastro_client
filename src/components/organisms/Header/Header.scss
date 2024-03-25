@@ -1,0 +1,43 @@
+@import '../../../assets/scss/rem-calc';
+@import '../../../assets/scss/sizes';
+@import '../../../assets/scss/variables';
+
+.nav-header{
+    display: flex;
+    justify-content: space-between ;
+    flex-direction: row!important;
+    align-items: center;
+    padding-right: rem-calc(16);
+    width: 100% !important;
+    z-index: 10000 !important;
+    .nav-header-login{
+        color: var(--white);
+    }
+
+    .nav-header-menuBtn{
+        transition: transform 0.3s ease;
+
+        &:hover{
+            background-color: rgba(0,0,0, .25);
+        }
+        &.open{
+            transform: rotate(180deg)
+        }
+    }
+    
+}
+.lateral_nav_menu{
+    margin-top: rem-calc(64)!important;
+    a{
+        color: gray;
+        svg{
+            margin-right: rem-calc(30);
+        }
+    }
+}
+.menu-link{
+    color: var(--black);
+    &:visited{
+        color: var(--black);  
+    }
+}
