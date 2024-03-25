@@ -2,8 +2,19 @@
 @import '../../../assets/scss/sizes';
 @import '../../../assets/scss/variables';
 
+main{
+@media (max-width: 768px) {
+  
+    padding: 24px 12px!important;
+    margin-left: -229px!important;
+  
+    .card-complete-info{
+        
+    }
+}
+}
 .main-header{
-    max-width: rem-calc(800);
+    max-width: rem-calc(960);
     height: rem-calc(30);
     display: flex;
     justify-content: space-between;
@@ -13,10 +24,17 @@
         border-radius: rem-calc(5);
         color: var(--white);
         background-color: var(--success);
+        transition: .5s;
+        cursor: pointer;
+        &:hover{
+            background-color: #07669d;
+            transition: .5s;
+        }
     }
 }
 
 .main-content{
+    min-height:  rem-calc(500);
     max-width: rem-calc(960);
     border: 1px solid var(--secondary-color);
     border-radius: rem-calc(5);
@@ -29,10 +47,14 @@
        }
     }
     .main-content-list{
-        padding: 15px;
+        padding:  rem-calc(15);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
+    }
+    @media (max-width: 600px) {
+   max-width: rem-calc(336);
+        
     }
 }

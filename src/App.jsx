@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/Home';
 import MyAccount from "./pages/Sobre"
 import './App.css';
-import Footer from './components/organisms/Footer/Footer';
+
 
 function App() {
   return (
@@ -15,7 +15,6 @@ function App() {
     
       </Routes>
     </BrowserRouter>
-    <Footer />
     </div>
   );
 }

@@ -4,7 +4,7 @@
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: rem-calc(10)
   }
   
   /* Track */
@@ -13,7 +13,7 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #1976d2; 
-    border-radius: 10px;
+    border-radius:rem-calc(10);
   }
   
   /* Handle on hover */
@@ -22,5 +22,5 @@
   }
 
   .Toastify__toast-container{
-    margin-top: 50px!important;
+    margin-top: rem-calc(50)!important;
   }

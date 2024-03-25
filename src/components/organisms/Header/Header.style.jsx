@@ -19,7 +19,7 @@ export const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open
       }),
       marginLeft: 0,
     }),
-  }),
+  })
 );
 
 export const AppBar = styled(MuiAppBar, {
@@ -33,8 +33,7 @@ export const AppBar = styled(MuiAppBar, {
     width: `calc(100% - ${drawerWidth}px)`,
     marginLeft: `${drawerWidth}px`,
     transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
+      easing: theme.transitions.duration.enteringScreen,
     }),
   }),
 }));

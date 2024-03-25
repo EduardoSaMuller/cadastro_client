@@ -1,12 +1,16 @@
+
 import React from 'react';
 import Header from '../components/organisms/Header/Header';
-import userPhoto from '../assets/images/user1.jpg';
+import Footer from '../components/organisms/Footer/Footer';
 import './Home.scss';
+
 const Home = () => {
+
+
   return (
     <div className="home">
-      <Header userPhoto={userPhoto} />
-      
+      <Header  />
+      <Footer/>
     </div>
   );
 };

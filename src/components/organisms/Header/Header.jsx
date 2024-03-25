@@ -1,5 +1,5 @@
 //React
-import React ,{ useState, useEffect }from 'react';
+import React ,{ useState }from 'react';
 import { Link } from 'react-router-dom';
 
 //Importação de componentes criados
@@ -31,13 +31,12 @@ import CloseIcon from '@mui/icons-material/Close';
 import GroupIcon from '@mui/icons-material/Group';
 import HomeIcon from '@mui/icons-material/Home';
 import ListItemIcon from '@mui/material/ListItemIcon';
-import LoginIcon from '@mui/icons-material/Login';
 import LogoutIcon from '@mui/icons-material/Logout';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 
-export default function Header2() {
+export default function Header() {
   const [open, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   

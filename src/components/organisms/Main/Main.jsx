@@ -4,7 +4,7 @@ import ClientCard from '../../molecules/Card/Card';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Main.scss'
-import ClientModal from '../../molecules/Modal/Modal';
+import RegisterModal from '../../molecules/Modal/Modal';
 
 const drawerWidth = 200;
 
@@ -17,7 +17,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
         easing: theme.transitions.easing.sharp,
         duration: theme.transitions.duration.leavingScreen,
       }),
-      marginTop: `100px`,
+      marginTop: `69px`,
       marginLeft: `-${drawerWidth}px`,
       ...(open && {
         transition: theme.transitions.create('margin', {
@@ -39,10 +39,7 @@ export default function MainContent({ open }) {
 
   const onAddClient = (client) => {
     setClientList([...clientList, client]);
-    console.log(client)
   };
-  console.log(clientList)
-  console.log(onAddClient)
   return (
     <Main open={open}>
       <div className='main-header'>
@@ -59,6 +56,18 @@ export default function MainContent({ open }) {
               key={index}
               name={client.name}
               foto={client.foto}
+              cpf={client.cpf}
+              phone={client.phone}
+              email={client.email}
+              surname={client.surname}
+                birthdate={client.birthdate}
+                city={client.city}
+                number={client.number}
+                district={client.district}
+                state={client.state}
+                cep={client.cep}
+                gender={client.gender}
+                street={client.street}
             />
           ))}
         </div>
@@ -77,8 +86,8 @@ export default function MainContent({ open }) {
         theme="light"
       />
 
-      {/* Passando a função onAddClient para o ClientModal */}
-      <ClientModal openModal={openModal} handleClose={handleClose} onAddClient={onAddClient} />
+      {/* Passando a função onAddClient para o RegisterModal */}
+      <RegisterModal openModal={openModal} handleClose={handleClose} onAddClient={onAddClient} />
 
     </Main>
   );
